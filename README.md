@@ -1,13 +1,13 @@
 # CMSC126 LABORATORY EXERCISE #4
 
-### Objective:
+## Objective:
 Edit the `Lab.css` file to design and style the different web pages.
 
-### Important:
+## Important:
 You are NOT allowed to modify or change any of the HTML files.
 All design and layout changes must be done using CSS only.
 
-### Guidelines:
+## Guidelines:
 1. Some elements do not have classes or IDs (for example, the list of steps in making coffee).
    To style these elements, use contextual selectors, element selectors,
    attribute selectors, or other appropriate CSS selector techniques.
