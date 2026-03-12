@@ -1,16 +1,4 @@
-/*
-COLOR PALETTE REF
-https://coolors.co/1c2321-ec4949-5e6572-f5e2c8-a3c3d9
 
-
-*/
-body.order{
-    margin: 0;
-    background-color: var(--cream);
-    color: var(--deep-green);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.7;
-}
 :root {
     --deep-green: #1c2321;
     --coral: #ec4949;
@@ -125,25 +113,6 @@ a[href="#title"]:hover {
     color: var(--deep-green);
     text-align: center;
 }
-
-.coffee ol {
-    margin: 0;
-    padding-left: 24px;
-}
-
-.coffee li {
-    margin-bottom: 12px;
-}
-
-.definition {
-    margin: 0;
-}
-
-.emphasis {
-    color: var(--coral);
-    font-weight: bold;
-}
-
 .coffee img:not(.imgBanner) {
     display: block;
     width: min(100%, 360px);
@@ -151,25 +120,6 @@ a[href="#title"]:hover {
     border: 4px solid var(--coral);
     border-radius: 16px;
 }
-
-#orderCoffee {
-    display: block;
-    margin: 12px auto 8px;
-    padding: 14px 28px;
-    background-color: var(--coral);
-    color: var(--cream);
-    border: 2px solid var(--deep-green);
-    border-radius: 999px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#orderCoffee:hover {
-    background-color: var(--deep-green);
-    color: var(--cream);
-}
-
 footer {
     margin-top: 32px;
     padding: 24px 20px;
@@ -204,4 +154,40 @@ footer #title {
     .imgBanner {
         width: calc(100% - 24px);
     }
+}
+/*
+ADDED LINES FOR ORDER.CSS
+*/
+body.order{
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--deep-green);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.7;
+}
+
+body.order img.coffeeImg{
+    border: initial;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+
+}
+body.order .coffee{
+    overflow-x:auto;
+}
+#coffee_choices .coffeeTitle{
+    text-align: center;
+    font-weight: bold;
+    padding:20px;
+    color: var(--coral);
+}
+#tagline{
+    text-align: center;
+}
+
+body.order h2{
+    border-radius: 10px;
+    background-color: var(--coral);
+    color: var(--powder-blue)
 }
