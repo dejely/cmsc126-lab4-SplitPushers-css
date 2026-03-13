@@ -34,4 +34,456 @@ Better to create seperate css files.
 */
 
 
-/* Maybe put general items here like header/footer
+:root {
+    --deep-green: #1c2321;
+    --coral: #ec4949;
+    --slate: #5e6572;
+    --cream: #f5e2c8;
+    --powder-blue: #a3c3d9;
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+body.home {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--deep-green);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    background-color: var(--deep-green);
+    color: var(--cream);
+    text-align: center;
+    padding: 32px 20px 20px;
+}
+
+header #title {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+hr {
+    width: min(92%, 1000px);
+    margin: 20px auto;
+    border: 0;
+    border-top: 3px solid var(--slate);
+}
+
+header hr {
+    margin-bottom: 0;
+    border-top-color: var(--powder-blue);
+}
+
+#welcome {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 20px 24px;
+    background-color: var(--powder-blue);
+    border-left: 8px solid var(--coral);
+    border-radius: 14px;
+    font-size: 1.05rem;
+}
+
+.navBar {
+    max-width: 960px;
+    margin: 0 auto 28px;
+    padding: 16px 20px;
+    background-color: var(--slate);
+    text-align: center;
+    border-radius: 14px;
+}
+
+.navigation {
+    display: inline-block;
+    margin: 0 14px;
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation:hover {
+    color: var(--coral);
+}
+
+.imgBanner {
+    display: block;
+    width: min(92%, 1000px);
+    margin: 0 auto 14px;
+    border: 5px solid var(--deep-green);
+    border-radius: 16px;
+}
+
+a[href="#bottomPage"],
+a[href="#title"] {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 24px;
+    color: var(--coral);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[href="#bottomPage"]:hover,
+a[href="#title"]:hover {
+    color: var(--deep-green);
+}
+
+.coffee {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 28px;
+    background-color: var(--powder-blue);
+    border: 2px solid var(--slate);
+    border-radius: 16px;
+}
+
+.coffee h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--deep-green);
+    text-align: center;
+}
+
+.coffee ol {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.coffee li {
+    margin-bottom: 12px;
+}
+
+.definition {
+    margin: 0;
+}
+
+.emphasis {
+    color: var(--coral);
+    font-weight: bold;
+}
+
+.coffee img:not(.imgBanner) {
+    display: block;
+    width: min(100%, 360px);
+    margin: 0 auto;
+    border: 4px solid var(--coral);
+    border-radius: 16px;
+}
+
+#orderCoffee {
+    display: block;
+    margin: 12px auto 8px;
+    padding: 14px 28px;
+    background-color: var(--coral);
+    color: var(--cream);
+    border: 2px solid var(--deep-green);
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#orderCoffee:hover {
+    background-color: var(--deep-green);
+    color: var(--cream);
+}
+
+footer {
+    margin-top: 32px;
+    padding: 24px 20px;
+    background-color: var(--slate);
+    color: var(--cream);
+    text-align: center;
+}
+
+
+footer #title {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+footer #title {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.contacts {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+    header #title {
+        font-size: 1.8rem;
+    }
+
+    .navigation {
+        display: block;
+        margin: 8px 0;
+    }
+
+    #welcome,
+    .navBar,
+    .coffee,
+    .imgBanner {
+        width: calc(100% - 24px);
+    }
+}
+/* 
+Order.css
+*/
+
+
+header {
+    background-color: var(--deep-green);
+    color: var(--cream);
+    text-align: center;
+    padding: 32px 20px 20px;
+}
+
+header #title {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+
+header hr {
+    margin-bottom: 0;
+    border-top-color: var(--powder-blue);
+}
+
+.navigation:hover {
+    color: var(--coral);
+}
+
+a[href="#bottomPage"],
+a[href="#title"] {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 24px;
+    color: var(--coral);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[href="#bottomPage"]:hover,
+a[href="#title"]:hover {
+    color: var(--deep-green);
+}
+
+.coffee h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--deep-green);
+    text-align: center;
+}
+.coffee img:not(.imgBanner) {
+    display: block;
+    width: min(100%, 360px);
+    margin: 0 auto;
+    border: 4px solid var(--coral);
+    border-radius: 16px;
+}
+
+footer #title {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.contacts {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+    header #title {
+        font-size: 1.8rem;
+    }
+
+    .navigation {
+        display: block;
+        margin: 8px 0;
+    }
+
+    #welcome,
+    .navBar,
+    .coffee,
+    .imgBanner {
+        width: calc(100% - 24px);
+    }
+}
+/*
+ADDED LINES FOR ORDER.CSS
+*/
+
+body.order {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--deep-green);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.7;
+}
+
+body.order img.coffeeImg{
+    border: initial;
+    border-radius: 20px;
+    object-fit: fill;
+    width: 100px;
+    height: 100px;
+
+}
+body.order img.coffeeImg:hover{
+    box-shadow: 0px 0px 10px 1px #50aa5d;
+}
+
+p {
+    margin: 0 0 16px;
+    color:var(--deep-green);
+    text-align: center;
+}
+body.about {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--deep-green);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.7;
+}
+
+header #title {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+header hr {
+    margin-bottom: 0;
+    border-top-color: var(--powder-blue);
+}
+
+.navigation:hover {
+    color: var(--coral);
+}
+
+.imgBanner {
+    display: block;
+    width: min(92%, 1000px);
+    margin: 0 auto 14px;
+    border: 5px solid var(--deep-green);
+    border-radius: 16px;
+}
+
+a[href="#bottomPage"],
+a[href="#title"] {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 24px;
+    color: var(--coral);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[href="#bottomPage"]:hover,
+a[href="#title"]:hover {
+    color: var(--deep-green);
+}
+
+
+.coffee h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--deep-green);
+    text-align: center;
+}
+
+.coffee li {
+    margin-bottom: 12px;
+}
+
+.definition {
+    margin: 0;
+}
+
+.emphasis {
+    color: var(--coral);
+    font-weight: bold;
+}
+
+.coffee img:not(.imgBanner) {
+    display: block;
+    width: min(100%, 360px);
+    margin: 0 auto;
+    border: 4px solid var(--coral);
+    border-radius: 16px;
+}
+
+footer #title {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.contacts {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+    header #title {
+        font-size: 1.8rem;
+    }
+
+    .navigation {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .navBar,
+    .coffee,
+    .imgBanner {
+        width: calc(100% - 24px);
+    }
+}
+
+.teamMember {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+div.team {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.coffee ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.coffeeVideo{
+    display: block;
+    width: 640px;
+    height: 360px;
+    margin: 24px auto;
+}
+
+hr.bottom {
+    margin-top: 32px;
+    border-top: 3px solid var(--slate);
+}
+
+.label {
+    margin: 0 auto 8px;
+    color: var(--deep-green);
+    font-weight: bold;
+    text-align: center;
+}
